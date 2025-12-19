@@ -39,30 +39,27 @@ pip install -r requirements.txt
 
 # Run application
 streamlit run app.py
-📊 Project Structure
-The project contains the following files and directories:
+📊 Data File Description
+The application processes the synthetic_traffic.csv file which contains the following columns:
 
-| File/Folder              | Description                              |
+| Column                   | Description                              |
 |--------------------------|------------------------------------------|
-| app.py                   | Main Streamlit application               |
-| analysis.py              | Core analysis functions                  |
-| plotting.py              | Data visualization functions             |
-| data_loader.py           | Excel file loading and validation        |
-| check_excel_format.py    | Excel format validation utilities        |
-| create_sample_data.py    | Script to generate sample data           |
-| create_new_sample_data.py| Alternative sample data generator        |
-| complex_function.py      | Complex analysis functions               |
-| refactored_function.py   | Refactored analysis utilities            |
-| test_analysis.py         | Unit tests for analysis functions        |
-| synthetic_traffic.csv    | Sample data file                         |
-| requirements.txt         | Python dependencies                      |
-| README.md                | Project documentation                    |
-| LICENSE                  | License information                      |
-| __pycache__              | Python cache directory                   |
-| .pytest_cache            | Pytest cache directory                   |
-| docs/                    | Documentation directory                  |
-| pages/                   | Additional Streamlit pages               |
-| venv/                    | Virtual environment directory            |
+| date                     | Date in YYYY-MM-DD format                |
+| sessions                 | Number of website sessions               |
+| page_views               | Number of page views                     |
+| bounce_rate              | Bounce rate (0-1)                        |
+| avg_session_duration     | Average session duration in seconds      |
+| new_users                | Number of new users                      |
+| returning_users          | Number of returning users                |
+
+📈 Types of Graphs Generated
+The application creates the following visualizations from the data:
+
+- **Revenue Trend Plot**: Shows the trend of revenue over time
+- **Quantity Trend Plot**: Displays the number of items sold over time
+- **Forecast Plot**: Projects future revenue and quantity trends
+- **Category Analysis**: Shows revenue and quantity trends for specific categories
+- **Correlation Heatmap**: Shows relationships between different metrics
 
 🎓 Educational Purpose
 This project serves as a comprehensive learning example demonstrating:
@@ -116,30 +113,27 @@ pip install -r requirements.txt
 # Запустить приложение
 streamlit run app.py
 
-📊 Структура проекта
-Проект содержит следующие файлы и директории:
+📊 Описание файла данных
+Приложение обрабатывает файл synthetic_traffic.csv, который содержит следующие столбцы:
 
-| Файл/Директория          | Описание                                 |
+| Столбец                  | Описание                                 |
 |--------------------------|------------------------------------------|
-| app.py                   | Основное приложение Streamlit            |
-| analysis.py              | Основные функции анализа                 |
-| plotting.py              | Функции визуализации данных               |
-| data_loader.py           | Загрузка и проверка формата Excel файлов |
-| check_excel_format.py    | Утилиты проверки формата Excel           |
-| create_sample_data.py    | Скрипт для генерации образца данных      |
-| create_new_sample_data.py| Альтернативный генератор образца данных  |
-| complex_function.py      | Комплексные функции анализа              |
-| refactored_function.py   | Рефакторинг утилит анализа               |
-| test_analysis.py         | Модульные тесты для функций анализа      |
-| synthetic_traffic.csv    | Файл образца данных                      |
-| requirements.txt         | Зависимости Python                        |
-| README.md                | Документация проекта                     |
-| LICENSE                  | Информация о лицензии                    |
-| __pycache__              | Директория кэша Python                   |
-| .pytest_cache            | Директория кэша Pytest                   |
-| docs/                    | Директория документации                  |
-| pages/                   | Дополнительные страницы Streamlit        |
-| venv/                    | Директория виртуального окружения        |
+| date                     | Дата в формате YYYY-MM-DD                |
+| sessions                 | Количество сессий на сайте               |
+| page_views               | Количество просмотров страниц            |
+| bounce_rate              | Показатель отказов (0-1)                 |
+| avg_session_duration     | Средняя продолжительность сессии в секундах |
+| new_users                | Количество новых пользователей           |
+| returning_users          | Количество возвращающихся пользователей   |
+
+📈 Типы создаваемых графиков
+Приложение создает следующие визуализации на основе данных:
+
+- **График тренда выручки**: Показывает тренд выручки по времени
+- **График количества**: Отображает количество проданных товаров по времени
+- **Прогнозный график**: Проецирует будущие тренды выручки и количества
+- **Анализ по категориям**: Показывает тренды выручки и количества для конкретных категорий
+- **Тепловая карта корреляции**: Показывает взаимосвязи между различными метриками
 
 🎓 Образовательная цель
 Этот проект служит комплексным учебным примером, демонстрирующим:
