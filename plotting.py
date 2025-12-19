@@ -280,3 +280,39 @@ def create_category_filter_plot(df: pd.DataFrame, category: str) -> object:
     fig.update_yaxes(title_text="Количество", secondary_y=True)
 
     return fig
+
+
+def create_correlation_heatmap(df: pd.DataFrame) -> object:
+    """
+    Creates a correlation heatmap showing relationships between numerical columns.
+
+    Args:
+        df: DataFrame containing the data to analyze
+
+    Returns:
+        Plotly figure object
+    """
+    # Create additional calculated columns for analysis
+    plot_df = df.copy()
+    plot_df['revenue'] = plot_df['price'] * plot_df['quantity']
+
+    # Select only numerical columns for correlation
+    numerical_cols = ['price', 'quantity', 'revenue']
+    corr_data = plot_df[numerical_cols].corr()
+
+    # Create heatmap
+    fig = px.imshow(
+        corr_data,
+        text_auto=True,
+        aspect="auto",
+        title="Корреляционная матрица показателей",
+        color_continuous_scale='RdBu',
+        range_color=[-1, 1]
+    )
+
+    fig.update_layout(
+        xaxis_title="Показатели",
+        yaxis_title="Показатели"
+    )
+
+    return fig

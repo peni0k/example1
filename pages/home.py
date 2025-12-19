@@ -4,7 +4,7 @@ from datetime import datetime
 from data_loader import load_data_from_path, load_uploaded_data
 from analysis import calculate_sales_kpis, get_filtered_data
 from plotting import (create_revenue_trend_plot, create_quantity_trend_plot,
-                     create_forecast_plot, create_category_filter_plot)
+                     create_forecast_plot, create_category_filter_plot, create_correlation_heatmap)
 
 
 def main():
@@ -150,7 +150,8 @@ def main():
             "Динамика выручки по дням",
             "Динамика количества продаж по дням",
             "Прогноз выручки и количества",
-            "Анализ по категориям"
+            "Анализ по категориям",
+            "Корреляционная матрица показателей"
         ]
     )
 
@@ -168,6 +169,8 @@ def main():
             st.warning("Для анализа по отдельной категории, пожалуйста, выберите только одну категорию")
             # Default to showing revenue trend
             fig = create_revenue_trend_plot(filtered_df, selected_categories)
+    elif chart_type == "Корреляционная матрица показателей":
+        fig = create_correlation_heatmap(filtered_df)
 
     st.plotly_chart(fig, use_container_width=True)
 
