@@ -13,12 +13,12 @@ st.write("Выберите раздел для работы с приложен�
 col1, col2 = st.columns(2)
 
 with col1:
-    if st.button("📚 Справка и информация"):
-        st.write("[Перейти к справке](pages/home)")
+    if st.button("🏠 Главная страница"):
+        st.write("[Перейти к анализу](pages/home)")
 
 with col2:
-    if st.button("📊 Анализ продаж"):
-        st.write("[Перейти к анализу](pages/sales_analyzer)")
+    if st.button("ℹ️ Информация и справка"):
+        st.write("[Перейти к информации](pages/info)")
 
 # Alternative navigation using session state
 if 'page' not in st.session_state:
@@ -26,8 +26,8 @@ if 'page' not in st.session_state:
 
 # Provide direct links
 st.subheader("Быстрые ссылки:")
-st.page_link("pages/home.py", label="Главная страница и справка", icon="🏠")
-st.page_link("pages/sales_analyzer.py", label="Анализ продаж", icon="📊")
+st.page_link("pages/home.py", label="Анализ продаж", icon="📊")
+st.page_link("pages/info.py", label="Информация и справка", icon="ℹ️")
 
 st.divider()
 
