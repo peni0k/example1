@@ -17,19 +17,29 @@ def calculate_sales_kpis(df: pd.DataFrame) -> Tuple[float, float, int, float]:
         - Total quantity sold
         - Average daily quantity sold
     """
-    total_revenue = float((df['price'] * df['quantity']).sum())
+    revenue_series = df["price"] * df["quantity"]
+    total_revenue = float(revenue_series.sum())
 
     # Calculate average daily revenue
-    unique_dates = df['date'].nunique()
-    avg_daily_revenue = total_revenue / unique_dates if unique_dates > 0 else 0.0
+    unique_dates = df["date"].nunique()
+    if unique_dates > 0:
+        avg_daily_revenue = total_revenue / unique_dates
+    else:
+        avg_daily_revenue = 0.0
 
-    total_quantity = int(df['quantity'].sum())
-    avg_daily_quantity = total_quantity / unique_dates if unique_dates > 0 else 0.0
+    total_quantity = int(df["quantity"].sum())
+
+    if unique_dates > 0:
+        avg_daily_quantity = total_quantity / unique_dates
+    else:
+        avg_daily_quantity = 0.0
 
     return total_revenue, avg_daily_revenue, total_quantity, avg_daily_quantity
 
 
-def get_filtered_data(df: pd.DataFrame, start_date: date, end_date: date) -> pd.DataFrame:
+def get_filtered_data(
+    df: pd.DataFrame, start_date: date, end_date: date
+) -> pd.DataFrame:
     """
     Filters the data based on the selected date range.
 
@@ -46,7 +56,7 @@ def get_filtered_data(df: pd.DataFrame, start_date: date, end_date: date) -> pd.
     end_datetime = pd.to_datetime(end_date)
 
     # Filter the dataframe
-    mask = (df['date'] >= start_datetime) & (df['date'] <= end_datetime)
+    mask = (df["date"] >= start_datetime) & (df["date"] <= end_datetime)
     filtered_df = df.loc[mask].copy()
 
     return filtered_df
