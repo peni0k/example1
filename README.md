@@ -34,28 +34,35 @@ For Development Teams:
 🚀 Development Workflow
 Local Development:
 
-# Clone repository
-git clone https://github.com/mihnin/example1.git
-cd example1
-
-# Setup virtual environment
-python -m venv venv
-.\venv\Scripts\activate  # Windows
-source venv/bin/activate # Linux/Mac
-
 # Install dependencies
 pip install -r requirements.txt
 
 # Run application
 streamlit run app.py
-📊 Sample Data Structure
-The application processes Excel files with the following structure:
+📊 Project Structure
+The project contains the following files and directories:
 
-| Date       | Product_1 | Product_2 | Product_3 |
-|------------|-----------|-----------|-----------|
-| 2020-01-01 | 1000      | 1500      | 800       |
-| 2020-02-01 | 1100      | 1400      | 850       |
-| ...        | ...       | ...       | ...       |
+| File/Folder              | Description                              |
+|--------------------------|------------------------------------------|
+| app.py                   | Main Streamlit application               |
+| analysis.py              | Core analysis functions                  |
+| plotting.py              | Data visualization functions             |
+| data_loader.py           | Excel file loading and validation        |
+| check_excel_format.py    | Excel format validation utilities        |
+| create_sample_data.py    | Script to generate sample data           |
+| create_new_sample_data.py| Alternative sample data generator        |
+| complex_function.py      | Complex analysis functions               |
+| refactored_function.py   | Refactored analysis utilities            |
+| test_analysis.py         | Unit tests for analysis functions        |
+| synthetic_traffic.csv    | Sample data file                         |
+| requirements.txt         | Python dependencies                      |
+| README.md                | Project documentation                    |
+| LICENSE                  | License information                      |
+| __pycache__              | Python cache directory                   |
+| .pytest_cache            | Pytest cache directory                   |
+| docs/                    | Documentation directory                  |
+| pages/                   | Additional Streamlit pages               |
+| venv/                    | Virtual environment directory            |
 
 🎓 Educational Purpose
 This project serves as a comprehensive learning example demonstrating:
@@ -103,29 +110,36 @@ Perfect for:
 🚀 Рабочий процесс разработки
 Локальная разработка:
 
-# Клонировать репозиторий
-git clone https://github.com/mihnin/example1.git
-cd example1
-
-# Настроить виртуальное окружение
-python -m venv venv
-.\venv\Scripts\activate  # Windows
-source venv/bin/activate # Linux/Mac
-
 # Установить зависимости
 pip install -r requirements.txt
 
 # Запустить приложение
 streamlit run app.py
 
-📊 Структура примера данных
-Приложение обрабатывает Excel файлы со следующей структурой:
+📊 Структура проекта
+Проект содержит следующие файлы и директории:
 
-| Date       | Product_1 | Product_2 | Product_3 |
-|------------|-----------|-----------|-----------|
-| 2020-01-01 | 1000      | 1500      | 800       |
-| 2020-02-01 | 1100      | 1400      | 850       |
-| ...        | ...       | ...       | ...       |
+| Файл/Директория          | Описание                                 |
+|--------------------------|------------------------------------------|
+| app.py                   | Основное приложение Streamlit            |
+| analysis.py              | Основные функции анализа                 |
+| plotting.py              | Функции визуализации данных               |
+| data_loader.py           | Загрузка и проверка формата Excel файлов |
+| check_excel_format.py    | Утилиты проверки формата Excel           |
+| create_sample_data.py    | Скрипт для генерации образца данных      |
+| create_new_sample_data.py| Альтернативный генератор образца данных  |
+| complex_function.py      | Комплексные функции анализа              |
+| refactored_function.py   | Рефакторинг утилит анализа               |
+| test_analysis.py         | Модульные тесты для функций анализа      |
+| synthetic_traffic.csv    | Файл образца данных                      |
+| requirements.txt         | Зависимости Python                        |
+| README.md                | Документация проекта                     |
+| LICENSE                  | Информация о лицензии                    |
+| __pycache__              | Директория кэша Python                   |
+| .pytest_cache            | Директория кэша Pytest                   |
+| docs/                    | Директория документации                  |
+| pages/                   | Дополнительные страницы Streamlit        |
+| venv/                    | Директория виртуального окружения        |
 
 🎓 Образовательная цель
 Этот проект служит комплексным учебным примером, демонстрирующим:
