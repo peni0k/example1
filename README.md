@@ -40,17 +40,14 @@ pip install -r requirements.txt
 # Run application
 streamlit run app.py
 📊 Data File Description
-The application processes the synthetic_traffic.csv file which contains the following columns:
+The application processes CSV files which contain the following columns:
 
 | Column                   | Description                              |
 |--------------------------|------------------------------------------|
-| date                     | Date in YYYY-MM-DD format                |
-| sessions                 | Number of website sessions               |
-| page_views               | Number of page views                     |
-| bounce_rate              | Bounce rate (0-1)                        |
-| avg_session_duration     | Average session duration in seconds      |
-| new_users                | Number of new users                      |
-| returning_users          | Number of returning users                |
+| date                     | Date in YYYY-MM-DD format (e.g., 2023-01-15) |
+| category                 | Category of product or service (e.g., 'Electronics', 'Clothing') |
+| price                    | Price per unit of product/service (e.g., 1500.00) |
+| quantity                 | Number of units sold (e.g., 2)           |
 
 📈 Types of Graphs Generated
 The application creates the following visualizations from the data:
@@ -114,17 +111,14 @@ pip install -r requirements.txt
 streamlit run app.py
 
 📊 Описание файла данных
-Приложение обрабатывает файл synthetic_traffic.csv, который содержит следующие столбцы:
+Приложение обрабатывает CSV-файлы, которые содержат следующие столбцы:
 
 | Столбец                  | Описание                                 |
 |--------------------------|------------------------------------------|
-| date                     | Дата в формате YYYY-MM-DD                |
-| sessions                 | Количество сессий на сайте               |
-| page_views               | Количество просмотров страниц            |
-| bounce_rate              | Показатель отказов (0-1)                 |
-| avg_session_duration     | Средняя продолжительность сессии в секундах |
-| new_users                | Количество новых пользователей           |
-| returning_users          | Количество возвращающихся пользователей   |
+| date                     | Дата в формате YYYY-MM-DD (например: 2023-01-15) |
+| category                 | Категория товара или услуги (например: 'Электроника', 'Одежда') |
+| price                    | Цена за единицу товара/услуги (например: 1500.00) |
+| quantity                 | Количество проданных единиц (например: 2) |
 
 📈 Типы создаваемых графиков
 Приложение создает следующие визуализации на основе данных:
